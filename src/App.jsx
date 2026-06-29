@@ -1,70 +1,125 @@
+import { useState } from "react";
+import {
+  LayoutDashboard,
+  Users,
+  Laptop,
+  ClipboardList,
+  FileText,
+  DollarSign,
+  Package,
+  Settings,
+  LogOut,
+} from "lucide-react";
+import "./App.css";
+
 function App() {
-  return (
-    <div
-      style={{
-        background: "#111827",
-        minHeight: "100vh",
-        color: "white",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        fontFamily: "Arial"
-      }}
-    >
-      <div
-        style={{
-          width: 420,
-          background: "#1f2937",
-          padding: 40,
-          borderRadius: 15,
-          boxShadow: "0 0 30px rgba(255,0,0,.2)"
-        }}
-      >
-        <h1 style={{ color: "#ef4444", textAlign: "center" }}>
-          HARDSYSTEM CONTROL
-        </h1>
+  const [isLogged, setIsLogged] = useState(false);
 
-        <p style={{ textAlign: "center", color: "#d1d5db" }}>
-          Sistema de Gestión
-        </p>
+  if (!isLogged) {
+    return (
+      <div className="login-page">
+        <div className="login-card">
+          <h1>HARDSYSTEM</h1>
+          <h2>CONTROL</h2>
+          <p>Sistema de gestión técnica</p>
 
-        <input
-          placeholder="Usuario"
-          style={{
-            width: "100%",
-            padding: 12,
-            marginTop: 20,
-            borderRadius: 8
-          }}
-        />
+          <input placeholder="Usuario" />
+          <input type="password" placeholder="Contraseña" />
 
-        <input
-          type="password"
-          placeholder="Contraseña"
-          style={{
-            width: "100%",
-            padding: 12,
-            marginTop: 15,
-            borderRadius: 8
-          }}
-        />
+          <button onClick={() => setIsLogged(true)}>Ingresar</button>
 
-        <button
-          style={{
-            width: "100%",
-            padding: 12,
-            marginTop: 20,
-            background: "#dc2626",
-            color: "white",
-            border: 0,
-            borderRadius: 8,
-            cursor: "pointer",
-            fontSize: 16
-          }}
-        >
-          Ingresar
-        </button>
+          <small>Administrador / Técnico</small>
+        </div>
       </div>
+    );
+  }
+
+  return (
+    <div className="app">
+      <aside className="sidebar">
+        <div className="brand">
+          <h2>HARDSYSTEM</h2>
+          <span>CONTROL</span>
+        </div>
+
+        <nav>
+          <a className="active"><LayoutDashboard /> Dashboard</a>
+          <a><Users /> Clientes</a>
+          <a><Laptop /> Equipos</a>
+          <a><ClipboardList /> Pendientes</a>
+          <a><FileText /> Presupuestos</a>
+          <a><DollarSign /> Ventas</a>
+          <a><Package /> Stock</a>
+          <a><Settings /> Configuración</a>
+        </nav>
+
+        <button className="logout" onClick={() => setIsLogged(false)}>
+          <LogOut /> Salir
+        </button>
+      </aside>
+
+      <main className="main">
+        <header className="topbar">
+          <div>
+            <h1>Dashboard</h1>
+            <p>Bienvenido, Administrador</p>
+          </div>
+          <button className="new-btn">+ Nueva orden</button>
+        </header>
+
+        <section className="cards">
+          <div className="card">
+            <span>Equipos en taller</span>
+            <strong>12</strong>
+          </div>
+          <div className="card">
+            <span>Pendientes</span>
+            <strong>8</strong>
+          </div>
+          <div className="card">
+            <span>Presupuestos</span>
+            <strong>5</strong>
+          </div>
+          <div className="card">
+            <span>Ventas del día</span>
+            <strong>$18.250</strong>
+          </div>
+        </section>
+
+        <section className="panel">
+          <h2>Actividad reciente</h2>
+
+          <div className="table">
+            <div className="row head">
+              <span>Orden</span>
+              <span>Cliente</span>
+              <span>Equipo</span>
+              <span>Estado</span>
+            </div>
+
+            <div className="row">
+              <span>HS-000001</span>
+              <span>Juan Pérez</span>
+              <span>Notebook HP</span>
+              <span className="status yellow">Diagnosticando</span>
+            </div>
+
+            <div className="row">
+              <span>HS-000002</span>
+              <span>María González</span>
+              <span>PC Gamer</span>
+              <span className="status green">Listo</span>
+            </div>
+
+            <div className="row">
+              <span>HS-000003</span>
+              <span>Carlos Díaz</span>
+              <span>Notebook Lenovo</span>
+              <span className="status red">Esperando repuesto</span>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
   );
 }
