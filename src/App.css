@@ -231,3 +231,320 @@ nav a:hover,
   background: #7f1d1d;
   color: #fecaca;
 }
+nav button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #cbd5e1;
+  padding: 13px;
+  border-radius: 12px;
+  text-decoration: none;
+  background: transparent;
+  border: 0;
+  font-size: 15px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+nav button svg {
+  width: 20px;
+}
+
+nav button.active,
+nav button:hover {
+  background: #dc2626;
+  color: white;
+}
+
+.client-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 24px;
+  margin-top: 28px;
+}
+
+.form-card {
+  background: #111827;
+  border: 1px solid #1e293b;
+  border-radius: 18px;
+  padding: 24px;
+}
+
+.form-card h2 {
+  margin-top: 0;
+}
+
+.form-card input,
+.form-card textarea,
+.search-box input {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  background: #020617;
+  color: white;
+}
+
+.form-card textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.form-card button {
+  width: 100%;
+  padding: 13px;
+  border: 0;
+  border-radius: 10px;
+  background: #dc2626;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.search-box {
+  width: 320px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #020617;
+  border: 1px solid #334155;
+  padding: 0 12px;
+  border-radius: 10px;
+}
+
+.search-box input {
+  border: 0;
+  margin: 0;
+  padding-left: 4px;
+}
+
+.clients-list {
+  margin-top: 20px;
+  display: grid;
+  gap: 14px;
+}
+
+.client-card {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.client-card h3 {
+  margin: 0 0 8px;
+}
+
+.client-card p {
+  margin: 0 0 8px;
+  color: #e2e8f0;
+}
+
+.client-card small {
+  display: block;
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+.delete-btn {
+  background: #7f1d1d;
+  border: 0;
+  color: #fecaca;
+  border-radius: 10px;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+}
+
+.empty {
+  color: #94a3b8;
+}
+
+@media (max-width: 1000px) {
+  .client-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sidebar {
+    width: 220px;
+  }
+}
+.sidebar {
+  width: 260px;
+  background: #080d1b;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.brand {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.logo {
+  width: 180px;
+  height: auto;
+}
+
+.sidebar button {
+  background: transparent;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.sidebar button:hover {
+  background: #e31b23;
+}
+
+.sidebar button.active {
+  background: #e31b23;
+}
+.client-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 24px;
+  margin-top: 28px;
+}
+
+.form-card {
+  background: #111827;
+  border: 1px solid #1e293b;
+  border-radius: 18px;
+  padding: 24px;
+}
+
+.form-card h2 {
+  margin-top: 0;
+}
+
+.form-card input,
+.form-card textarea,
+.search-box input {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  background: #020617;
+  color: white;
+}
+
+.form-card textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.form-card button {
+  width: 100%;
+  padding: 13px;
+  border: 0;
+  border-radius: 10px;
+  background: #dc2626;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.search-box {
+  width: 320px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #020617;
+  border: 1px solid #334155;
+  padding: 0 12px;
+  border-radius: 10px;
+}
+
+.search-box input {
+  border: 0;
+  margin: 0;
+  padding-left: 4px;
+}
+
+.clients-list {
+  margin-top: 20px;
+  display: grid;
+  gap: 14px;
+}
+
+.client-card {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.client-card h3 {
+  margin: 0 0 8px;
+}
+
+.client-card p {
+  margin: 0 0 8px;
+  color: #e2e8f0;
+}
+
+.client-card small {
+  display: block;
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+.delete-btn {
+  background: #7f1d1d;
+  border: 0;
+  color: #fecaca;
+  border-radius: 10px;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+}
+
+.empty {
+  color: #94a3b8;
+}
