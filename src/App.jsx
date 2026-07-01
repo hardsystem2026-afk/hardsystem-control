@@ -1,3 +1,4 @@
+import Equipos from "./pages/Equipos";
 import { useState } from "react";
 import Login from "./pages/Login";
 import MainLayout from "./layouts/MainLayout";
@@ -17,6 +18,7 @@ function App() {
     <MainLayout page={page} setPage={setPage} onLogout={() => setIsLogged(false)}>
       {page === "dashboard" && <Dashboard setPage={setPage} />}
       {page === "clientes" && <Clientes />}
+      {page === "equipos" && <Equipos />}
     </MainLayout>
   );
 }

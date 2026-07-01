@@ -26,7 +26,12 @@ export default function Sidebar({ page, setPage, onLogout }) {
         <button className={page === "clientes" ? "active" : ""} onClick={() => setPage("clientes")}>
           <Users /> Clientes
         </button>
-        <button><Laptop /> Equipos</button>
+        <button
+  className={page === "equipos" ? "active" : ""}
+  onClick={() => setPage("equipos")}
+>
+  <Laptop /> Equipos
+</button>
         <button><ClipboardList /> Órdenes de Trabajo</button>
         <button><FileText /> Presupuestos</button>
         <button><DollarSign /> Ventas</button>
